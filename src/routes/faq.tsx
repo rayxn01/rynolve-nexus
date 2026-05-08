@@ -13,7 +13,7 @@ export const Route = createFileRoute("/faq")({
   component: () => (
     <StubPage
       eyebrow="FAQ"
-      title={<>Common <span class="gradient-text">questions</span></>}
+      title={<>Common <span className="gradient-text">questions</span></>}
       description="Everything you need to know about working with Rynolve."
       highlights={["Process & timelines","Pricing & contracts","Team & support"]}
     />

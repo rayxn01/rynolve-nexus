@@ -13,7 +13,7 @@ export const Route = createFileRoute("/privacy-policy")({
   component: () => (
     <StubPage
       eyebrow="Privacy"
-      title={<>Your data, <span class="gradient-text">respected</span></>}
+      title={<>Your data, <span className="gradient-text">respected</span></>}
       description="How Rynolve collects, stores and protects your data."
       highlights={[]}
     />

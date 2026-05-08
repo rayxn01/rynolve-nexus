@@ -13,7 +13,7 @@ export const Route = createFileRoute("/terms")({
   component: () => (
     <StubPage
       eyebrow="Terms"
-      title={<>Terms of <span class="gradient-text">service</span></>}
+      title={<>Terms of <span className="gradient-text">service</span></>}
       description="The legal terms governing your use of Rynolve services."
       highlights={[]}
     />

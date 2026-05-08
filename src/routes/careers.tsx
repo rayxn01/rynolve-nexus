@@ -13,7 +13,7 @@ export const Route = createFileRoute("/careers")({
   component: () => (
     <StubPage
       eyebrow="Careers"
-      title={<>Join the <span class="gradient-text">Rynolve crew</span></>}
+      title={<>Join the <span className="gradient-text">Rynolve crew</span></>}
       description="Remote-first, senior-only, and obsessed with craft. See open roles and our hiring process."
       highlights={["Remote-first culture","Top-of-market compensation","Real ownership & impact"]}
     />

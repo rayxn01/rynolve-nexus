@@ -13,7 +13,7 @@ export const Route = createFileRoute("/technologies")({
   component: () => (
     <StubPage
       eyebrow="Technologies"
-      title={<>The modern stack, <span class="gradient-text">mastered</span></>}
+      title={<>The modern stack, <span className="gradient-text">mastered</span></>}
       description="We work fluently across React, Next.js, Node, Python, OpenAI, AWS, GCP and the full modern toolchain."
       highlights={["Frontend & Mobile","AI/ML & data","Cloud, DevOps & infra"]}
     />

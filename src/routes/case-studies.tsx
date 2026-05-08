@@ -13,7 +13,7 @@ export const Route = createFileRoute("/case-studies")({
   component: () => (
     <StubPage
       eyebrow="Case Studies"
-      title={<>Real <span class="gradient-text">transformations</span></>}
+      title={<>Real <span className="gradient-text">transformations</span></>}
       description="Deep-dive stories of how we partnered with clients to ship outcomes that moved metrics."
       highlights={["Problem framing & strategy","Engineering & rollout","Outcomes, ROI & growth"]}
     />

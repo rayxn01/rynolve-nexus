@@ -13,7 +13,7 @@ export const Route = createFileRoute("/blog")({
   component: () => (
     <StubPage
       eyebrow="Blog"
-      title={<>Insights from the <span class="gradient-text">build floor</span></>}
+      title={<>Insights from the <span className="gradient-text">build floor</span></>}
       description="AI, engineering, product and growth — practical writing from people who ship."
       highlights={["AI & automation deep-dives","Engineering best practices","Founder & growth playbooks"]}
     />

@@ -13,7 +13,7 @@ export const Route = createFileRoute("/industries")({
   component: () => (
     <StubPage
       eyebrow="Industries"
-      title={<>Built for <span class="gradient-text">your sector</span></>}
+      title={<>Built for <span className="gradient-text">your sector</span></>}
       description="Vertical expertise across healthcare, fintech, ecommerce, logistics, education and SaaS."
       highlights={["Healthcare & Fintech","Ecommerce & Retail","SaaS & Enterprise"]}
     />
