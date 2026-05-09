@@ -7,6 +7,7 @@ import {
 import { Section, SectionHeader, FadeIn, GlowBackground } from "@/components/Section";
 import { GradientButton } from "@/components/GradientButton";
 import { Counter } from "@/components/Counter";
+import { HeroRobot } from "@/components/HeroRobot";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -110,69 +111,7 @@ function Home() {
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <div className="relative h-[500px]">
-              {/* Floating UI cards */}
-              <motion.div
-                animate={{ y: [0, -15, 0] }}
-                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-0 right-0 glass glow-border rounded-2xl p-5 w-64 shadow-elegant"
-              >
-                <div className="flex items-center gap-2 mb-3">
-                  <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-violet to-primary flex items-center justify-center">
-                    <Bot className="h-4 w-4 text-white" />
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold">AI Agent</p>
-                    <p className="text-xs text-muted-foreground">Active · 24/7</p>
-                  </div>
-                </div>
-                <div className="h-2 rounded-full bg-white/5 overflow-hidden">
-                  <motion.div initial={{ width: "20%" }} animate={{ width: "85%" }}
-                    transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
-                    className="h-full bg-gradient-to-r from-primary to-accent" />
-                </div>
-                <p className="mt-3 text-xs text-muted-foreground">2,481 tasks automated today</p>
-              </motion.div>
-
-              <motion.div
-                animate={{ y: [0, 15, 0] }}
-                transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                className="absolute top-32 left-0 glass glow-border rounded-2xl p-5 w-72 shadow-elegant"
-              >
-                <p className="text-xs text-muted-foreground mb-2">Conversion uplift</p>
-                <p className="text-3xl font-bold gradient-text">+312%</p>
-                <div className="mt-3 flex items-end gap-1 h-12">
-                  {[40, 55, 38, 70, 60, 85, 95].map((h,i) => (
-                    <motion.div key={i}
-                      initial={{ height: 0 }} animate={{ height: `${h}%` }}
-                      transition={{ duration: 1, delay: i * 0.1 }}
-                      className="flex-1 rounded-t bg-gradient-to-t from-primary to-accent" />
-                  ))}
-                </div>
-              </motion.div>
-
-              <motion.div
-                animate={{ y: [0, -10, 0], rotate: [0, 1, 0] }}
-                transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                className="absolute bottom-8 right-8 glass glow-border rounded-2xl p-5 w-60 shadow-elegant"
-              >
-                <div className="flex items-center justify-between mb-2">
-                  <p className="text-sm font-semibold">Deployments</p>
-                  <span className="px-2 py-0.5 rounded-full bg-accent/20 text-accent text-xs">Live</span>
-                </div>
-                <div className="space-y-2">
-                  {["api.production", "web.staging", "ml.inference"].map((s,i) => (
-                    <div key={i} className="flex items-center gap-2 text-xs">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent animate-glow-pulse" />
-                      <span className="text-muted-foreground">{s}</span>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-
-              {/* Central glow orb */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-gradient-to-br from-violet via-primary to-accent opacity-40 blur-3xl animate-blob" />
-            </div>
+            <HeroRobot />
           </FadeIn>
         </div>
       </section>
