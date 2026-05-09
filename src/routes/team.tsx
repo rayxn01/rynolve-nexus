@@ -3,6 +3,11 @@ import { ArrowRight, Linkedin, Mail } from "lucide-react";
 import { FadeIn, GlowBackground, Section, SectionHeader } from "@/components/Section";
 import { GradientButton } from "@/components/GradientButton";
 import leadershipImg from "@/assets/leadership.png";
+import rayanImg from "@/assets/team/rayan.png";
+import waseemImg from "@/assets/team/waseem.png";
+import farizImg from "@/assets/team/fariz.png";
+import shahzadImg from "@/assets/team/shahzad.png";
+import arhamImg from "@/assets/team/arham.png";
 
 const team = [
   {
@@ -10,30 +15,35 @@ const team = [
     role: "CEO & Lead Analyst",
     tagline: "Industry Expert | 7+ Years",
     bio: "Founder & CEO of Rynolve. Specialized in restructuring and organizational design for major public and private corporations across the UK and Pakistan.",
+    photo: rayanImg,
   },
   {
     name: "Muhammad Waseem",
     role: "Director of Design Operations",
     tagline: "Design Industry Expert | 7+ Years in UI/UX & Digital Design",
     bio: "Specialized in design strategy, user experience and brand identity systems for startups and enterprise digital products at Rynolve.",
+    photo: waseemImg,
   },
   {
     name: "Fariz Ali",
     role: "Chief Technology Officer",
     tagline: "Technology Industry Expert | 7+ Years in Engineering Leadership",
     bio: "CTO at Rynolve. Leads the engineering org across cloud, AI and product platforms — architecting scalable systems for high-growth companies.",
+    photo: farizImg,
   },
   {
     name: "Rana Shahzad",
     role: "Director of Developer Operations",
     tagline: "Technology Industry Expert | 10+ Years in DevOps",
     bio: "Specialized in system infrastructure, CI/CD and developer workflows for major public and private corporations partnered with Rynolve.",
+    photo: shahzadImg,
   },
   {
     name: "Arham Ijaz",
     role: "Chief Financial Officer",
     tagline: "Finance Industry Expert | 15+ Years in Financial Management",
     bio: "CFO at Rynolve. Specialized in financial strategy and corporate planning for major public and private corporations across multiple regions.",
+    photo: arhamImg,
   },
 ];
 
