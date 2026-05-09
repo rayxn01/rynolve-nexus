@@ -92,15 +92,18 @@ function TeamPage() {
           {team.map((m, i) => (
             <FadeIn key={m.name} delay={i * 0.06}>
               <article className="glass glow-border rounded-2xl p-7 h-full flex flex-col hover-lift">
-                <div className="flex items-center gap-4">
-                  <div className="relative w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/30 to-violet/30 flex items-center justify-center font-display font-bold text-xl">
-                    {m.name.split(" ").map((p) => p[0]).slice(0, 2).join("")}
-                    <span className="absolute inset-0 rounded-2xl ring-1 ring-primary/30" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold leading-tight">{m.name}</h3>
-                    <p className="text-sm text-primary">{m.role}</p>
-                  </div>
+                <div className="relative aspect-square w-full overflow-hidden rounded-2xl bg-black ring-1 ring-primary/20">
+                  <img
+                    src={m.photo}
+                    alt={`${m.name} — ${m.role} at Rynolve`}
+                    loading="lazy"
+                    className="w-full h-full object-cover object-top"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+                </div>
+                <div className="mt-5">
+                  <h3 className="text-lg font-bold leading-tight">{m.name}</h3>
+                  <p className="text-sm text-primary">{m.role}</p>
                 </div>
                 <p className="mt-5 text-xs uppercase tracking-widest text-muted-foreground">{m.tagline}</p>
                 <p className="mt-3 text-sm text-muted-foreground leading-relaxed flex-1">{m.bio}</p>
