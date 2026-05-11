@@ -166,23 +166,25 @@ function Home() {
         <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((s, i) => (
             <FadeIn key={s.title} delay={i * 0.05}>
-              <motion.div
-                whileHover={{ y: -6 }}
-                className="group relative glass rounded-2xl p-7 h-full hover:shadow-glow transition-all overflow-hidden"
-              >
-                <div className="absolute -inset-px rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"
-                  style={{ background: "linear-gradient(135deg, oklch(0.62 0.22 290 / 0.4), transparent 70%)" }} />
-                <div className="relative">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-violet/30 to-primary/30 flex items-center justify-center mb-5 group-hover:shadow-glow-sm transition-shadow">
-                    <s.icon className="h-6 w-6 text-primary" />
+              <Link to="/services" className="block h-full">
+                <motion.div
+                  whileHover={{ y: -6 }}
+                  className="group relative glass rounded-2xl p-7 h-full hover:shadow-glow transition-all overflow-hidden"
+                >
+                  <div className="absolute -inset-px rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"
+                    style={{ background: "linear-gradient(135deg, oklch(0.62 0.22 290 / 0.4), transparent 70%)" }} />
+                  <div className="relative">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-violet/30 to-primary/30 flex items-center justify-center mb-5 group-hover:shadow-glow-sm transition-shadow">
+                      <s.icon className="h-6 w-6 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-semibold">{s.title}</h3>
+                    <p className="mt-2 text-sm text-muted-foreground">{s.desc}</p>
+                    <div className="mt-5 flex items-center gap-1 text-sm text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                      Learn more <ArrowRight className="h-3 w-3" />
+                    </div>
                   </div>
-                  <h3 className="text-xl font-semibold">{s.title}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground">{s.desc}</p>
-                  <div className="mt-5 flex items-center gap-1 text-sm text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-                    Learn more <ArrowRight className="h-3 w-3" />
-                  </div>
-                </div>
-              </motion.div>
+                </motion.div>
+              </Link>
             </FadeIn>
           ))}
         </div>
