@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import {
   Sparkles, Bot, Code2, Smartphone, Palette, Cloud, Zap, Shield,
@@ -166,23 +166,25 @@ function Home() {
         <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((s, i) => (
             <FadeIn key={s.title} delay={i * 0.05}>
-              <motion.div
-                whileHover={{ y: -6 }}
-                className="group relative glass rounded-2xl p-7 h-full hover:shadow-glow transition-all overflow-hidden"
-              >
-                <div className="absolute -inset-px rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"
-                  style={{ background: "linear-gradient(135deg, oklch(0.62 0.22 290 / 0.4), transparent 70%)" }} />
-                <div className="relative">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-violet/30 to-primary/30 flex items-center justify-center mb-5 group-hover:shadow-glow-sm transition-shadow">
-                    <s.icon className="h-6 w-6 text-primary" />
+              <Link to="/services" className="block h-full">
+                <motion.div
+                  whileHover={{ y: -6 }}
+                  className="group relative glass rounded-2xl p-7 h-full hover:shadow-glow transition-all overflow-hidden"
+                >
+                  <div className="absolute -inset-px rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"
+                    style={{ background: "linear-gradient(135deg, oklch(0.62 0.22 290 / 0.4), transparent 70%)" }} />
+                  <div className="relative">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-violet/30 to-primary/30 flex items-center justify-center mb-5 group-hover:shadow-glow-sm transition-shadow">
+                      <s.icon className="h-6 w-6 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-semibold">{s.title}</h3>
+                    <p className="mt-2 text-sm text-muted-foreground">{s.desc}</p>
+                    <div className="mt-5 flex items-center gap-1 text-sm text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                      Learn more <ArrowRight className="h-3 w-3" />
+                    </div>
                   </div>
-                  <h3 className="text-xl font-semibold">{s.title}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground">{s.desc}</p>
-                  <div className="mt-5 flex items-center gap-1 text-sm text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-                    Learn more <ArrowRight className="h-3 w-3" />
-                  </div>
-                </div>
-              </motion.div>
+                </motion.div>
+              </Link>
             </FadeIn>
           ))}
         </div>
@@ -280,21 +282,23 @@ function Home() {
         <div className="mt-16 grid md:grid-cols-3 gap-6">
           {projects.map((p, i) => (
             <FadeIn key={p.title} delay={i * 0.08}>
-              <motion.div
-                whileHover={{ y: -8 }}
-                className="group relative aspect-[4/5] rounded-2xl overflow-hidden glass cursor-pointer"
-              >
-                <div className={`absolute inset-0 bg-gradient-to-br ${p.color} opacity-60 group-hover:opacity-80 transition-opacity`} />
-                <div className="absolute inset-0 grid-bg opacity-30" />
-                <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                  <span className="text-xs text-white/70 uppercase tracking-wide">{p.tag}</span>
-                  <h3 className="mt-2 text-2xl font-bold text-white">{p.title}</h3>
-                  <p className="mt-2 text-sm text-white/80">{p.metric}</p>
-                  <div className="mt-4 inline-flex items-center gap-1 text-sm text-white opacity-0 group-hover:opacity-100 transition-opacity">
-                    View case study <ArrowRight className="h-3 w-3" />
+              <Link to="/portfolio" className="block">
+                <motion.div
+                  whileHover={{ y: -8 }}
+                  className="group relative aspect-[4/5] rounded-2xl overflow-hidden glass cursor-pointer"
+                >
+                  <div className={`absolute inset-0 bg-gradient-to-br ${p.color} opacity-60 group-hover:opacity-80 transition-opacity`} />
+                  <div className="absolute inset-0 grid-bg opacity-30" />
+                  <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                    <span className="text-xs text-white/70 uppercase tracking-wide">{p.tag}</span>
+                    <h3 className="mt-2 text-2xl font-bold text-white">{p.title}</h3>
+                    <p className="mt-2 text-sm text-white/80">{p.metric}</p>
+                    <div className="mt-4 inline-flex items-center gap-1 text-sm text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                      View case study <ArrowRight className="h-3 w-3" />
+                    </div>
                   </div>
-                </div>
-              </motion.div>
+                </motion.div>
+              </Link>
             </FadeIn>
           ))}
         </div>

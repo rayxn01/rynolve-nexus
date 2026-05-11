@@ -45,8 +45,9 @@ export function StubPage({
       <Section>
         <FadeIn>
           <div className="glass glow-border rounded-3xl p-12 text-center">
-            <p className="text-xs uppercase tracking-widest text-primary mb-3">Coming soon</p>
-            <h2 className="text-3xl font-bold">This page is being expanded — <span className="gradient-text">talk to us in the meantime</span></h2>
+            <p className="text-xs uppercase tracking-widest text-primary mb-3">Let's build together</p>
+            <h2 className="text-3xl font-bold">Have a project in mind? <span className="gradient-text">Let's talk.</span></h2>
+            <p className="mt-3 text-sm text-muted-foreground max-w-xl mx-auto">Book a free 30-minute strategy call and get tailored recommendations for your goals.</p>
             <div className="mt-8 flex flex-wrap gap-3 justify-center">
               <GradientButton to="/contact" size="lg">Contact us <ArrowRight className="h-4 w-4" /></GradientButton>
               <GradientButton to="/book-consultation" variant="outline" size="lg">Book a call</GradientButton>

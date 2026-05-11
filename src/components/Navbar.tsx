@@ -8,12 +8,13 @@ const nav = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
   { to: "/services", label: "Services" },
-  { to: "/solutions", label: "Solutions" },
+  { to: "/automations", label: "Automations" },
   { to: "/portfolio", label: "Portfolio" },
   { to: "/pricing", label: "Pricing" },
   {
     label: "More",
     children: [
+      { to: "/solutions", label: "Solutions" },
       { to: "/case-studies", label: "Case Studies" },
       { to: "/technologies", label: "Technologies" },
       { to: "/industries", label: "Industries" },
