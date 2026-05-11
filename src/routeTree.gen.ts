@@ -24,6 +24,7 @@ import { Route as CaseStudiesRouteImport } from './routes/case-studies'
 import { Route as CareersRouteImport } from './routes/careers'
 import { Route as BookConsultationRouteImport } from './routes/book-consultation'
 import { Route as BlogRouteImport } from './routes/blog'
+import { Route as AutomationsRouteImport } from './routes/automations'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -102,6 +103,11 @@ const BlogRoute = BlogRouteImport.update({
   path: '/blog',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AutomationsRoute = AutomationsRouteImport.update({
+  id: '/automations',
+  path: '/automations',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
@@ -116,6 +122,7 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/automations': typeof AutomationsRoute
   '/blog': typeof BlogRoute
   '/book-consultation': typeof BookConsultationRoute
   '/careers': typeof CareersRoute
@@ -135,6 +142,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/automations': typeof AutomationsRoute
   '/blog': typeof BlogRoute
   '/book-consultation': typeof BookConsultationRoute
   '/careers': typeof CareersRoute
@@ -155,6 +163,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/automations': typeof AutomationsRoute
   '/blog': typeof BlogRoute
   '/book-consultation': typeof BookConsultationRoute
   '/careers': typeof CareersRoute
@@ -176,6 +185,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/automations'
     | '/blog'
     | '/book-consultation'
     | '/careers'
@@ -195,6 +205,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
+    | '/automations'
     | '/blog'
     | '/book-consultation'
     | '/careers'
@@ -214,6 +225,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
+    | '/automations'
     | '/blog'
     | '/book-consultation'
     | '/careers'
@@ -234,6 +246,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  AutomationsRoute: typeof AutomationsRoute
   BlogRoute: typeof BlogRoute
   BookConsultationRoute: typeof BookConsultationRoute
   CareersRoute: typeof CareersRoute
@@ -358,6 +371,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/automations': {
+      id: '/automations'
+      path: '/automations'
+      fullPath: '/automations'
+      preLoaderRoute: typeof AutomationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/about': {
       id: '/about'
       path: '/about'
@@ -378,6 +398,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  AutomationsRoute: AutomationsRoute,
   BlogRoute: BlogRoute,
   BookConsultationRoute: BookConsultationRoute,
   CareersRoute: CareersRoute,
