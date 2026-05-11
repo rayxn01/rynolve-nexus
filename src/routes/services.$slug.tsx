@@ -2,7 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowRight, Check, ArrowLeft } from "lucide-react";
 import { Section, SectionHeader, FadeIn, GlowBackground } from "@/components/Section";
 import { GradientButton } from "@/components/GradientButton";
-import { getService, services } from "@/data/services";
+import { getService, services, type ServiceDetail } from "@/data/services";
 
 export const Route = createFileRoute("/services/$slug")({
   loader: ({ params }) => {
