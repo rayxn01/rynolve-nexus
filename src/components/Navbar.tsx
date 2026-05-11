@@ -14,6 +14,7 @@ const nav = [
   {
     label: "More",
     children: [
+      { to: "/solutions", label: "Solutions" },
       { to: "/case-studies", label: "Case Studies" },
       { to: "/technologies", label: "Technologies" },
       { to: "/industries", label: "Industries" },
