@@ -16,7 +16,7 @@ const cols = [
   {
     title: "Services",
     links: [
-      { to: "/services", label: "AI Automation" },
+      { to: "/automations", label: "AI Automations" },
       { to: "/services", label: "Web Development" },
       { to: "/services", label: "Mobile Apps" },
       { to: "/services", label: "SaaS Platforms" },
