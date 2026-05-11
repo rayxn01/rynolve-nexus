@@ -282,21 +282,23 @@ function Home() {
         <div className="mt-16 grid md:grid-cols-3 gap-6">
           {projects.map((p, i) => (
             <FadeIn key={p.title} delay={i * 0.08}>
-              <motion.div
-                whileHover={{ y: -8 }}
-                className="group relative aspect-[4/5] rounded-2xl overflow-hidden glass cursor-pointer"
-              >
-                <div className={`absolute inset-0 bg-gradient-to-br ${p.color} opacity-60 group-hover:opacity-80 transition-opacity`} />
-                <div className="absolute inset-0 grid-bg opacity-30" />
-                <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                  <span className="text-xs text-white/70 uppercase tracking-wide">{p.tag}</span>
-                  <h3 className="mt-2 text-2xl font-bold text-white">{p.title}</h3>
-                  <p className="mt-2 text-sm text-white/80">{p.metric}</p>
-                  <div className="mt-4 inline-flex items-center gap-1 text-sm text-white opacity-0 group-hover:opacity-100 transition-opacity">
-                    View case study <ArrowRight className="h-3 w-3" />
+              <Link to="/portfolio" className="block">
+                <motion.div
+                  whileHover={{ y: -8 }}
+                  className="group relative aspect-[4/5] rounded-2xl overflow-hidden glass cursor-pointer"
+                >
+                  <div className={`absolute inset-0 bg-gradient-to-br ${p.color} opacity-60 group-hover:opacity-80 transition-opacity`} />
+                  <div className="absolute inset-0 grid-bg opacity-30" />
+                  <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                    <span className="text-xs text-white/70 uppercase tracking-wide">{p.tag}</span>
+                    <h3 className="mt-2 text-2xl font-bold text-white">{p.title}</h3>
+                    <p className="mt-2 text-sm text-white/80">{p.metric}</p>
+                    <div className="mt-4 inline-flex items-center gap-1 text-sm text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                      View case study <ArrowRight className="h-3 w-3" />
+                    </div>
                   </div>
-                </div>
-              </motion.div>
+                </motion.div>
+              </Link>
             </FadeIn>
           ))}
         </div>
