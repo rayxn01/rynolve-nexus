@@ -22,12 +22,12 @@ export const Route = createFileRoute("/")({
 });
 
 const services = [
-  { icon: Bot, title: "AI Automation", desc: "Custom AI agents and workflows that eliminate repetitive work." },
-  { icon: Code2, title: "Web Development", desc: "Performant, beautiful, SEO-optimised sites and platforms." },
-  { icon: Smartphone, title: "Mobile Apps", desc: "Native-feel iOS and Android apps with React Native & Flutter." },
-  { icon: Cloud, title: "SaaS Platforms", desc: "End-to-end product engineering, from MVP to enterprise scale." },
-  { icon: Palette, title: "UI/UX Design", desc: "Interfaces that feel premium, intuitive and on-brand." },
-  { icon: Zap, title: "Business Automation", desc: "Connect your stack with custom APIs, dashboards and CRMs." },
+  { icon: Bot, title: "AI Automation", desc: "Custom AI agents and workflows that eliminate repetitive work.", slug: "ai-automation" },
+  { icon: Code2, title: "Web Development", desc: "Performant, beautiful, SEO-optimised sites and platforms.", slug: "website-development" },
+  { icon: Smartphone, title: "Mobile Apps", desc: "Native-feel iOS and Android apps with React Native & Flutter.", slug: "mobile-apps" },
+  { icon: Cloud, title: "SaaS Platforms", desc: "End-to-end product engineering, from MVP to enterprise scale.", slug: "saas-platforms" },
+  { icon: Palette, title: "UI/UX Design", desc: "Interfaces that feel premium, intuitive and on-brand.", slug: "ui-ux-design" },
+  { icon: Zap, title: "Business Automation", desc: "Connect your stack with custom APIs, dashboards and CRMs.", slug: "business-automation" },
 ];
 
 const why = [
@@ -166,7 +166,7 @@ function Home() {
         <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((s, i) => (
             <FadeIn key={s.title} delay={i * 0.05}>
-              <Link to="/services" className="block h-full">
+              <Link to="/services/$slug" params={{ slug: s.slug }} className="block h-full">
                 <motion.div
                   whileHover={{ y: -6 }}
                   className="group relative glass rounded-2xl p-7 h-full hover:shadow-glow transition-all overflow-hidden"
