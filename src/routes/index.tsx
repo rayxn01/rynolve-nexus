@@ -166,7 +166,7 @@ function Home() {
         <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((s, i) => (
             <FadeIn key={s.title} delay={i * 0.05}>
-              <Link to="/services" className="block h-full">
+              <Link to="/services/$slug" params={{ slug: s.slug }} className="block h-full">
                 <motion.div
                   whileHover={{ y: -6 }}
                   className="group relative glass rounded-2xl p-7 h-full hover:shadow-glow transition-all overflow-hidden"
