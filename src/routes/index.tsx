@@ -22,12 +22,12 @@ export const Route = createFileRoute("/")({
 });
 
 const services = [
-  { icon: Bot, title: "AI Automation", desc: "Custom AI agents and workflows that eliminate repetitive work." },
-  { icon: Code2, title: "Web Development", desc: "Performant, beautiful, SEO-optimised sites and platforms." },
-  { icon: Smartphone, title: "Mobile Apps", desc: "Native-feel iOS and Android apps with React Native & Flutter." },
-  { icon: Cloud, title: "SaaS Platforms", desc: "End-to-end product engineering, from MVP to enterprise scale." },
-  { icon: Palette, title: "UI/UX Design", desc: "Interfaces that feel premium, intuitive and on-brand." },
-  { icon: Zap, title: "Business Automation", desc: "Connect your stack with custom APIs, dashboards and CRMs." },
+  { icon: Bot, title: "AI Automation", desc: "Custom AI agents and workflows that eliminate repetitive work.", slug: "ai-automation" },
+  { icon: Code2, title: "Web Development", desc: "Performant, beautiful, SEO-optimised sites and platforms.", slug: "website-development" },
+  { icon: Smartphone, title: "Mobile Apps", desc: "Native-feel iOS and Android apps with React Native & Flutter.", slug: "mobile-apps" },
+  { icon: Cloud, title: "SaaS Platforms", desc: "End-to-end product engineering, from MVP to enterprise scale.", slug: "saas-platforms" },
+  { icon: Palette, title: "UI/UX Design", desc: "Interfaces that feel premium, intuitive and on-brand.", slug: "ui-ux-design" },
+  { icon: Zap, title: "Business Automation", desc: "Connect your stack with custom APIs, dashboards and CRMs.", slug: "business-automation" },
 ];
 
 const why = [
