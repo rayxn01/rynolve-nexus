@@ -13,6 +13,7 @@ import { Route as TermsRouteImport } from './routes/terms'
 import { Route as TechnologiesRouteImport } from './routes/technologies'
 import { Route as TeamRouteImport } from './routes/team'
 import { Route as SolutionsRouteImport } from './routes/solutions'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
@@ -47,6 +48,11 @@ const TeamRoute = TeamRouteImport.update({
 const SolutionsRoute = SolutionsRouteImport.update({
   id: '/solutions',
   path: '/solutions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
@@ -139,6 +145,7 @@ export interface FileRoutesByFullPath {
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/solutions': typeof SolutionsRoute
   '/team': typeof TeamRoute
   '/technologies': typeof TechnologiesRoute
@@ -160,6 +167,7 @@ export interface FileRoutesByTo {
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/solutions': typeof SolutionsRoute
   '/team': typeof TeamRoute
   '/technologies': typeof TechnologiesRoute
@@ -182,6 +190,7 @@ export interface FileRoutesById {
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/solutions': typeof SolutionsRoute
   '/team': typeof TeamRoute
   '/technologies': typeof TechnologiesRoute
@@ -205,6 +214,7 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/pricing'
     | '/privacy-policy'
+    | '/sitemap.xml'
     | '/solutions'
     | '/team'
     | '/technologies'
@@ -226,6 +236,7 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/pricing'
     | '/privacy-policy'
+    | '/sitemap.xml'
     | '/solutions'
     | '/team'
     | '/technologies'
@@ -247,6 +258,7 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/pricing'
     | '/privacy-policy'
+    | '/sitemap.xml'
     | '/solutions'
     | '/team'
     | '/technologies'
@@ -269,6 +281,7 @@ export interface RootRouteChildren {
   PortfolioRoute: typeof PortfolioRoute
   PricingRoute: typeof PricingRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SolutionsRoute: typeof SolutionsRoute
   TeamRoute: typeof TeamRoute
   TechnologiesRoute: typeof TechnologiesRoute
@@ -305,6 +318,13 @@ declare module '@tanstack/react-router' {
       path: '/solutions'
       fullPath: '/solutions'
       preLoaderRoute: typeof SolutionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/privacy-policy': {
@@ -429,6 +449,7 @@ const rootRouteChildren: RootRouteChildren = {
   PortfolioRoute: PortfolioRoute,
   PricingRoute: PricingRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   SolutionsRoute: SolutionsRoute,
   TeamRoute: TeamRoute,
   TechnologiesRoute: TechnologiesRoute,
