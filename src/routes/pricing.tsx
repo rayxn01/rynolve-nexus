@@ -92,7 +92,7 @@ function Pricing() {
                 <h3 className="text-2xl font-bold">{t.name}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">{t.desc}</p>
                 <div className="mt-6">
-                  <span className="text-5xl font-bold gradient-text">£{(yearly ? t.yearly : t.monthly).toLocaleString()}</span>
+                  <span className="text-5xl font-bold gradient-text">${(yearly ? t.yearly : t.monthly).toLocaleString()}</span>
                   <span className="text-sm text-muted-foreground">/mo</span>
                 </div>
                 {yearly && <p className="mt-1 text-xs text-accent">billed annually</p>}
