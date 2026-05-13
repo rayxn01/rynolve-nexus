@@ -9,12 +9,27 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 import { AnimatePresence, motion } from "framer-motion";
+import { lazy, Suspense, useEffect, useState } from "react";
 
 import appCss from "../styles.css?url";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { AIMascot } from "@/components/AIMascot";
-import { CursorGlow } from "@/components/CursorGlow";
+const AIMascot = lazy(() => import("@/components/AIMascot").then((m) => ({ default: m.AIMascot })));
+const CursorGlow = lazy(() => import("@/components/CursorGlow").then((m) => ({ default: m.CursorGlow })));
+
+function useDeferredMount(delay = 1500) {
+  const [ready, setReady] = useState(false);
+  useEffect(() => {
+    const ric = (window as any).requestIdleCallback as undefined | ((cb: () => void, opts?: { timeout: number }) => number);
+    if (ric) {
+      const id = ric(() => setReady(true), { timeout: delay });
+      return () => (window as any).cancelIdleCallback?.(id);
+    }
+    const t = setTimeout(() => setReady(true), delay);
+    return () => clearTimeout(t);
+  }, [delay]);
+  return ready;
+}
 
 function NotFoundComponent() {
   return (
