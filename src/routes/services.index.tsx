@@ -5,7 +5,7 @@ import { Section, SectionHeader, FadeIn, GlowBackground } from "@/components/Sec
 import { GradientButton } from "@/components/GradientButton";
 import { services } from "@/data/services";
 
-export const Route = createFileRoute("/services")({
+export const Route = createFileRoute("/services/")({
   head: () => ({
     meta: [
       { title: "Services — Rynolve" },
