@@ -136,10 +136,6 @@ function Portfolio() {
                     (e.currentTarget as HTMLImageElement).style.display = "none";
                   }}
                 />
-                  onError={(e) => {
-                    (e.currentTarget as HTMLImageElement).style.display = "none";
-                  }}
-                />
                 <div className={`absolute inset-0 bg-gradient-to-br ${p.color} opacity-30 mix-blend-overlay`} />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
 
