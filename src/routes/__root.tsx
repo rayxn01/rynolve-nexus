@@ -9,12 +9,27 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 import { AnimatePresence, motion } from "framer-motion";
+import { lazy, Suspense, useEffect, useState } from "react";
 
 import appCss from "../styles.css?url";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { AIMascot } from "@/components/AIMascot";
-import { CursorGlow } from "@/components/CursorGlow";
+const AIMascot = lazy(() => import("@/components/AIMascot").then((m) => ({ default: m.AIMascot })));
+const CursorGlow = lazy(() => import("@/components/CursorGlow").then((m) => ({ default: m.CursorGlow })));
+
+function useDeferredMount(delay = 1500) {
+  const [ready, setReady] = useState(false);
+  useEffect(() => {
+    const ric = (window as any).requestIdleCallback as undefined | ((cb: () => void, opts?: { timeout: number }) => number);
+    if (ric) {
+      const id = ric(() => setReady(true), { timeout: delay });
+      return () => (window as any).cancelIdleCallback?.(id);
+    }
+    const t = setTimeout(() => setReady(true), delay);
+    return () => clearTimeout(t);
+  }, [delay]);
+  return ready;
+}
 
 function NotFoundComponent() {
   return (
@@ -90,9 +105,14 @@ function RootShell({ children }: { children: React.ReactNode }) {
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const decorReady = useDeferredMount(1200);
   return (
     <QueryClientProvider client={queryClient}>
-      <CursorGlow />
+      {decorReady && (
+        <Suspense fallback={null}>
+          <CursorGlow />
+        </Suspense>
+      )}
       <Navbar />
       <main className="pt-24">
         <AnimatePresence mode="wait">
@@ -108,7 +128,11 @@ function RootComponent() {
         </AnimatePresence>
       </main>
       <Footer />
-      <AIMascot />
+      {decorReady && (
+        <Suspense fallback={null}>
+          <AIMascot />
+        </Suspense>
+      )}
     </QueryClientProvider>
   );
 }

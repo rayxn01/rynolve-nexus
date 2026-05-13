@@ -128,6 +128,9 @@ function Portfolio() {
                   alt={`${p.name} — live website preview`}
                   loading="lazy"
                   decoding="async"
+                  fetchPriority={i < 3 ? "high" : "low"}
+                  width={900}
+                  height={1100}
                   className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   onError={(e) => {
                     (e.currentTarget as HTMLImageElement).style.display = "none";

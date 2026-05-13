@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rynolve-vision-nexus.lovable.app/sitemap.xml
