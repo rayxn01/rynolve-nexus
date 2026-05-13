@@ -28,7 +28,7 @@ const roles = [
 const perks = [
   { icon: Globe, title: "Remote-first", desc: "Work from anywhere — we've been distributed since day one." },
   { icon: Heart, title: "Health & wellness", desc: "Premium private healthcare and wellness allowance." },
-  { icon: Zap, title: "Learning budget", desc: "£2,000 annual budget for books, courses and conferences." },
+  { icon: Zap, title: "Learning budget", desc: "$2,500 annual budget for books, courses and conferences." },
   { icon: Briefcase, title: "Equity & bonus", desc: "Meaningful equity and performance bonuses for everyone." },
 ];
 

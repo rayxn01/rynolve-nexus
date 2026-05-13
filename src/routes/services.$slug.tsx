@@ -133,7 +133,7 @@ function ServiceDetail() {
               </div>
               <div className="mt-8 pt-6 border-t border-border">
                 <p className="text-xs uppercase tracking-widest text-muted-foreground">Engagements start at</p>
-                <p className="mt-1 text-4xl font-bold gradient-text">£8,000</p>
+                <p className="mt-1 text-4xl font-bold gradient-text">$10,000</p>
                 <p className="mt-1 text-sm text-muted-foreground">Custom-quoted by scope and outcome.</p>
               </div>
             </div>

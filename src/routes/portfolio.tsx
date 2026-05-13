@@ -108,56 +108,53 @@ function Portfolio() {
         </div>
 
         <motion.div layout className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {items.map((p, i) => (
-            <motion.a
-              layout
-              key={p.url}
-              href={p.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.35, delay: (i % 9) * 0.04 }}
-              whileHover={{ y: -8 }}
-              className="group relative aspect-[4/5] rounded-2xl overflow-hidden glass cursor-pointer block"
-            >
-              <div className={`absolute inset-0 bg-gradient-to-br ${p.color} opacity-50 group-hover:opacity-70 transition-opacity`} />
-              <div className="absolute inset-0 grid-bg opacity-30" />
+          {items.map((p, i) => {
+            const shot = `https://image.thum.io/get/width/900/crop/1100/noanimate/${p.url}`;
+            return (
+              <motion.a
+                layout
+                key={p.url}
+                href={p.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.35, delay: (i % 9) * 0.04 }}
+                whileHover={{ y: -8 }}
+                className="group relative aspect-[4/5] rounded-2xl overflow-hidden glass cursor-pointer block"
+              >
+                <img
+                  src={shot}
+                  alt={`${p.name} — live website preview`}
+                  loading="lazy"
+                  decoding="async"
+                  className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                  onError={(e) => {
+                    (e.currentTarget as HTMLImageElement).style.display = "none";
+                  }}
+                />
+                <div className={`absolute inset-0 bg-gradient-to-br ${p.color} opacity-30 mix-blend-overlay`} />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
 
-              {/* Mock browser frame */}
-              <div className="absolute inset-6 top-6 bottom-36 rounded-xl glass overflow-hidden p-4">
-                <div className="flex gap-1.5 mb-3">
-                  <div className="w-2 h-2 rounded-full bg-white/30" />
-                  <div className="w-2 h-2 rounded-full bg-white/30" />
-                  <div className="w-2 h-2 rounded-full bg-white/30" />
+                <div className="absolute inset-x-0 bottom-0 p-6">
+                  <span className="inline-flex items-center gap-1 text-[10px] font-semibold tracking-wider uppercase text-white/90 px-2 py-0.5 rounded-full bg-white/10 backdrop-blur">
+                    <Globe className="h-3 w-3" /> {p.category}
+                  </span>
+                  <h3 className="mt-2 text-xl font-bold text-white leading-tight">{p.name}</h3>
+                  <p className="mt-1 text-xs text-white/70 line-clamp-2">{p.description}</p>
                 </div>
-                <div className="space-y-2">
-                  <div className="h-2 w-3/4 bg-white/30 rounded" />
-                  <div className="h-2 w-1/2 bg-white/20 rounded" />
-                  <div className="h-12 mt-3 rounded bg-white/10" />
-                  <div className="h-2 w-2/3 bg-white/20 rounded" />
-                  <div className="h-2 w-1/2 bg-white/15 rounded" />
+
+                <div className="absolute inset-0 bg-background/85 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end">
+                  <span className="text-xs text-primary uppercase tracking-wider">{p.category}</span>
+                  <h3 className="mt-1 text-2xl font-bold">{p.name}</h3>
+                  <p className="mt-2 text-sm text-muted-foreground">{p.description}</p>
+                  <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-primary self-start">
+                    Visit website <ExternalLink className="h-3.5 w-3.5" />
+                  </span>
                 </div>
-              </div>
-
-              <div className="absolute inset-x-0 bottom-0 p-6">
-                <span className="inline-flex items-center gap-1 text-[10px] font-semibold tracking-wider uppercase text-white/80 px-2 py-0.5 rounded-full bg-white/10 backdrop-blur">
-                  <Globe className="h-3 w-3" /> {p.category}
-                </span>
-                <h3 className="mt-2 text-xl font-bold text-white leading-tight">{p.name}</h3>
-                <p className="mt-1 text-xs text-white/70 line-clamp-2">{p.description}</p>
-              </div>
-
-              <div className="absolute inset-0 bg-background/85 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end">
-                <span className="text-xs text-primary uppercase tracking-wider">{p.category}</span>
-                <h3 className="mt-1 text-2xl font-bold">{p.name}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{p.description}</p>
-                <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-primary self-start">
-                  Visit website <ExternalLink className="h-3.5 w-3.5" />
-                </span>
-              </div>
-            </motion.a>
-          ))}
+              </motion.a>
+            );
+          })}
         </motion.div>
       </Section>
 

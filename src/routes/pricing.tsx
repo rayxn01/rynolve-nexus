@@ -20,24 +20,24 @@ export const Route = createFileRoute("/pricing")({
 const tiers = [
   {
     name: "Startup",
-    monthly: 4500,
-    yearly: 3800,
+    monthly: 5500,
+    yearly: 4675,
     desc: "Perfect for MVPs and early-stage products.",
     features: ["1 senior engineer", "1 designer (part-time)", "Up to 80 hrs/month", "Weekly demos", "Slack & Notion access", "30-day post-launch support"],
     highlight: false,
   },
   {
     name: "Business",
-    monthly: 12000,
-    yearly: 10200,
+    monthly: 15000,
+    yearly: 12750,
     desc: "Most popular for growing companies and SaaS teams.",
     features: ["Dedicated team of 3", "Senior engineers + designer + PM", "Up to 240 hrs/month", "AI/automation included", "Daily standups & weekly demos", "90-day post-launch support", "Priority response"],
     highlight: true,
   },
   {
     name: "Enterprise",
-    monthly: 28000,
-    yearly: 24000,
+    monthly: 35000,
+    yearly: 29750,
     desc: "For large-scale platforms and digital transformations.",
     features: ["Dedicated team of 6+", "Architects, AI engineers, QA", "Unlimited hours", "24/7 priority support", "SLA & security audits", "Dedicated account director", "Custom contracts"],
     highlight: false,
@@ -92,7 +92,7 @@ function Pricing() {
                 <h3 className="text-2xl font-bold">{t.name}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">{t.desc}</p>
                 <div className="mt-6">
-                  <span className="text-5xl font-bold gradient-text">£{(yearly ? t.yearly : t.monthly).toLocaleString()}</span>
+                  <span className="text-5xl font-bold gradient-text">${(yearly ? t.yearly : t.monthly).toLocaleString()}</span>
                   <span className="text-sm text-muted-foreground">/mo</span>
                 </div>
                 {yearly && <p className="mt-1 text-xs text-accent">billed annually</p>}
