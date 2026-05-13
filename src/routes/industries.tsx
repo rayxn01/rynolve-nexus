@@ -18,7 +18,7 @@ export const Route = createFileRoute("/industries")({
 
 const industries = [
   { icon: Heart, title: "Healthcare", desc: "Patient apps, telehealth and AI triage with HIPAA-aware architectures.", stats: "40+ projects" },
-  { icon: Banknote, title: "Fintech", desc: "Banking, payments and KYC with bank-grade security.", stats: "£2B+ processed" },
+  { icon: Banknote, title: "Fintech", desc: "Banking, payments and KYC with bank-grade security.", stats: "$2B+ processed" },
   { icon: ShoppingBag, title: "Ecommerce & Retail", desc: "Shopify Plus, headless storefronts and AI merchandising.", stats: "+312% avg lift" },
   { icon: Cloud, title: "SaaS & Enterprise", desc: "Multi-tenant SaaS platforms from MVP to IPO scale.", stats: "85+ products" },
   { icon: Truck, title: "Logistics", desc: "Fleet, route optimisation and shipment tracking dashboards.", stats: "Real-time" },
