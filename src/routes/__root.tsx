@@ -105,9 +105,14 @@ function RootShell({ children }: { children: React.ReactNode }) {
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const decorReady = useDeferredMount(1200);
   return (
     <QueryClientProvider client={queryClient}>
-      <CursorGlow />
+      {decorReady && (
+        <Suspense fallback={null}>
+          <CursorGlow />
+        </Suspense>
+      )}
       <Navbar />
       <main className="pt-24">
         <AnimatePresence mode="wait">
@@ -123,7 +128,11 @@ function RootComponent() {
         </AnimatePresence>
       </main>
       <Footer />
-      <AIMascot />
+      {decorReady && (
+        <Suspense fallback={null}>
+          <AIMascot />
+        </Suspense>
+      )}
     </QueryClientProvider>
   );
 }
