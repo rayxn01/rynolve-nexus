@@ -27,8 +27,8 @@ const groups = [
   {
     title: "Pricing & engagement",
     items: [
-      { q: "What does pricing look like?", a: "Fixed-scope projects start around £8,000. SaaS and AI platforms are custom-quoted by scope and outcome." },
-      { q: "Do you do retainers?", a: "Yes — monthly retainers from £6k/month for ongoing product, AI ops or growth work." },
+      { q: "What does pricing look like?", a: "Fixed-scope projects start around $10,000. SaaS and AI platforms are custom-quoted by scope and outcome." },
+      { q: "Do you do retainers?", a: "Yes — monthly retainers from $7,500/month for ongoing product, AI ops or growth work." },
       { q: "What's included in a project?", a: "Product strategy, design, engineering, QA, deployment, and 30 days of post-launch support." },
     ],
   },
