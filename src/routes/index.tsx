@@ -62,7 +62,7 @@ const faqs = [
   { q: "How quickly can we start?", a: "Most engagements kick off within 1–2 weeks of the discovery call." },
   { q: "Do you work with startups or only enterprise?", a: "Both. We have packages tuned for early-stage MVPs through to enterprise transformations." },
   { q: "Can you integrate AI into our existing product?", a: "Yes — that's our specialty. We embed AI agents, automation and intelligent UX into existing platforms." },
-  { q: "What does pricing look like?", a: "Fixed-scope projects start around £8k. SaaS engagements and AI platforms are custom-quoted." },
+  { q: "What does pricing look like?", a: "Fixed-scope projects start around $10k. SaaS engagements and AI platforms are custom-quoted." },
 ];
 
 function Home() {
