@@ -12,21 +12,33 @@ export function AIMascot() {
 
   useEffect(() => {
     setIsTouch(window.matchMedia("(hover: none)").matches);
-    const onMove = (e: MouseEvent) => {
+    let raf = 0;
+    let pending: { x: number; y: number } | null = null;
+    const flush = () => {
+      raf = 0;
+      if (!pending) return;
       const el = document.getElementById("ryno-mascot");
       if (!el) return;
       const r = el.getBoundingClientRect();
       const cx = r.left + r.width / 2;
       const cy = r.top + r.height / 2;
-      const dx = e.clientX - cx;
-      const dy = e.clientY - cy;
+      const dx = pending.x - cx;
+      const dy = pending.y - cy;
       const d = Math.hypot(dx, dy) || 1;
       const max = 6;
       mx.set((dx / d) * Math.min(max, d / 30));
       my.set((dy / d) * Math.min(max, d / 30));
+      pending = null;
     };
-    window.addEventListener("mousemove", onMove);
-    return () => window.removeEventListener("mousemove", onMove);
+    const onMove = (e: MouseEvent) => {
+      pending = { x: e.clientX, y: e.clientY };
+      if (!raf) raf = requestAnimationFrame(flush);
+    };
+    window.addEventListener("mousemove", onMove, { passive: true });
+    return () => {
+      window.removeEventListener("mousemove", onMove);
+      if (raf) cancelAnimationFrame(raf);
+    };
   }, [mx, my]);
 
   const eyeX = useTransform(sx, (v) => v * 0.6);

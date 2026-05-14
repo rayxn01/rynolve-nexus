@@ -82,12 +82,44 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:description", content: "Premium AI, web, mobile and SaaS development for forward-thinking companies." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "robots", content: "index,follow" },
+      { name: "googlebot", content: "index,follow" },
+      { name: "geo.region", content: "US" },
+      { property: "og:locale", content: "en_US" },
+      { property: "og:locale:alternate", content: "en_GB" },
+      { property: "og:locale:alternate", content: "en_PK" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
       { rel: "icon", type: "image/png", href: "/favicon.png" },
       { rel: "shortcut icon", type: "image/png", href: "/favicon.png" },
       { rel: "apple-touch-icon", href: "/favicon.png" },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" },
+      { rel: "alternate", hrefLang: "en-us", href: "https://rynolve-vision-nexus.lovable.app/" },
+      { rel: "alternate", hrefLang: "en-gb", href: "https://rynolve-vision-nexus.lovable.app/" },
+      { rel: "alternate", hrefLang: "en-pk", href: "https://rynolve-vision-nexus.lovable.app/" },
+      { rel: "alternate", hrefLang: "x-default", href: "https://rynolve-vision-nexus.lovable.app/" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Rynolve",
+          url: "https://rynolve-vision-nexus.lovable.app",
+          logo: "https://rynolve-vision-nexus.lovable.app/favicon.png",
+          description: "Premium AI, web, mobile and SaaS development for forward-thinking companies.",
+          areaServed: [
+            { "@type": "Country", name: "United States" },
+            { "@type": "Country", name: "United Kingdom" },
+            { "@type": "Country", name: "Pakistan" },
+          ],
+          sameAs: [],
+        }),
+      },
     ],
   }),
   shellComponent: RootShell,
@@ -124,10 +156,10 @@ function RootComponent() {
         <AnimatePresence mode="wait">
           <motion.div
             key={pathname}
-            initial={{ opacity: 0, y: 28, filter: "blur(8px)" }}
-            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-            exit={{ opacity: 0, y: -12, filter: "blur(6px)" }}
-            transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
           >
             <Outlet />
           </motion.div>
