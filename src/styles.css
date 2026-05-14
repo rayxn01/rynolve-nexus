@@ -2,7 +2,7 @@
 @source "../src";
 @import "tw-animate-css";
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+/* Fonts loaded via <link> tags in __root.tsx for non-blocking parallel fetch */
 
 @custom-variant dark (&:is(.dark *));
 
@@ -130,10 +130,15 @@
     background: var(--gradient-primary);
   }
   .glass {
-    background: var(--glass-bg);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    background: oklch(0.17 0.025 270 / 0.7);
     border: 1px solid var(--glass-border);
+  }
+  @media (hover: hover) and (min-width: 1024px) {
+    .glass {
+      background: var(--glass-bg);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
   }
   .glow {
     box-shadow: var(--shadow-glow);
