@@ -1,9 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { useMemo, useState } from "react";
-import { ArrowRight, ExternalLink, Globe } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Section, FadeIn, GlowBackground } from "@/components/Section";
 import { GradientButton } from "@/components/GradientButton";
+import { PortfolioCard } from "@/components/PortfolioCard";
 
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
@@ -108,56 +109,9 @@ function Portfolio() {
         </div>
 
         <motion.div layout className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {items.map((p, i) => {
-            const shot = `https://image.thum.io/get/width/900/crop/1100/noanimate/${p.url}`;
-            return (
-              <motion.a
-                layout
-                key={p.url}
-                href={p.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.35, delay: (i % 9) * 0.04 }}
-                whileHover={{ y: -8 }}
-                className="group relative aspect-[4/5] rounded-2xl overflow-hidden glass cursor-pointer block"
-              >
-                <img
-                  src={shot}
-                  alt={`${p.name} — live website preview`}
-                  loading="lazy"
-                  decoding="async"
-                  fetchPriority={i < 3 ? "high" : "low"}
-                  width={900}
-                  height={1100}
-                  className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
-                  onError={(e) => {
-                    (e.currentTarget as HTMLImageElement).style.display = "none";
-                  }}
-                />
-                <div className={`absolute inset-0 bg-gradient-to-br ${p.color} opacity-30 mix-blend-overlay`} />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
-
-                <div className="absolute inset-x-0 bottom-0 p-6">
-                  <span className="inline-flex items-center gap-1 text-[10px] font-semibold tracking-wider uppercase text-white/90 px-2 py-0.5 rounded-full bg-white/10 backdrop-blur">
-                    <Globe className="h-3 w-3" /> {p.category}
-                  </span>
-                  <h3 className="mt-2 text-xl font-bold text-white leading-tight">{p.name}</h3>
-                  <p className="mt-1 text-xs text-white/70 line-clamp-2">{p.description}</p>
-                </div>
-
-                <div className="absolute inset-0 bg-background/85 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end">
-                  <span className="text-xs text-primary uppercase tracking-wider">{p.category}</span>
-                  <h3 className="mt-1 text-2xl font-bold">{p.name}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground">{p.description}</p>
-                  <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-primary self-start">
-                    Visit website <ExternalLink className="h-3.5 w-3.5" />
-                  </span>
-                </div>
-              </motion.a>
-            );
-          })}
+          {items.map((p, i) => (
+            <PortfolioCard key={p.url} {...p} index={i} />
+          ))}
         </motion.div>
       </Section>
 
