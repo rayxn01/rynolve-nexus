@@ -10,13 +10,26 @@ export function CursorGlow() {
 
   useEffect(() => {
     if (window.matchMedia("(hover: none)").matches) return;
+    if (window.innerWidth < 1024) return; // skip on small viewports — cheap perf win
     setEnabled(true);
-    const move = (e: MouseEvent) => {
-      x.set(e.clientX);
-      y.set(e.clientY);
+    let raf = 0;
+    let pending: { x: number; y: number } | null = null;
+    const flush = () => {
+      raf = 0;
+      if (!pending) return;
+      x.set(pending.x);
+      y.set(pending.y);
+      pending = null;
     };
-    window.addEventListener("mousemove", move);
-    return () => window.removeEventListener("mousemove", move);
+    const move = (e: MouseEvent) => {
+      pending = { x: e.clientX, y: e.clientY };
+      if (!raf) raf = requestAnimationFrame(flush);
+    };
+    window.addEventListener("mousemove", move, { passive: true });
+    return () => {
+      window.removeEventListener("mousemove", move);
+      if (raf) cancelAnimationFrame(raf);
+    };
   }, [x, y]);
 
   if (!enabled) return null;
