@@ -1,12 +1,19 @@
 import logoImg from "@/assets/rynolve-logo.png";
 
-export function Logo({ className = "h-11 w-auto sm:h-12" }: { className?: string }) {
+export function Logo({ className = "h-9 w-9 sm:h-10 sm:w-10" }: { className?: string }) {
   return (
-    <img
-      src={logoImg}
-      alt="Rynolve"
-      className={`${className} object-contain select-none`}
-      draggable={false}
-    />
+    <span className="flex items-center gap-2 select-none">
+      <img
+        src={logoImg}
+        alt="Rynolve logo"
+        width={40}
+        height={40}
+        className={`${className} object-contain`}
+        draggable={false}
+      />
+      <span className="text-lg sm:text-xl font-display font-bold tracking-tight gradient-text">
+        Rynolve
+      </span>
+    </span>
   );
 }
