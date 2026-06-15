@@ -14,19 +14,20 @@ export function HeroRobot() {
   const px = useMotionValue(0);
   const py = useMotionValue(0);
 
-  // Smoothed
-  const sx = useSpring(px, { stiffness: 90, damping: 18, mass: 0.6 });
-  const sy = useSpring(py, { stiffness: 90, damping: 18, mass: 0.6 });
+  // Smoothed — snappier spring for more responsive tracking
+  const sx = useSpring(px, { stiffness: 140, damping: 16, mass: 0.5 });
+  const sy = useSpring(py, { stiffness: 140, damping: 16, mass: 0.5 });
 
-  // Head transforms
-  const headRotateY = useTransform(sx, [-1, 1], [-14, 14]);
-  const headRotateX = useTransform(sy, [-1, 1], [10, -10]);
-  const headTranslateX = useTransform(sx, [-1, 1], [-6, 6]);
-  const headTranslateY = useTransform(sy, [-1, 1], [-4, 4]);
+  // Head transforms — wider rotation & travel for visible tracking
+  const headRotateY = useTransform(sx, [-1, 1], [-28, 28]);
+  const headRotateX = useTransform(sy, [-1, 1], [22, -22]);
+  const headRotateZ = useTransform(sx, [-1, 1], [-6, 6]);
+  const headTranslateX = useTransform(sx, [-1, 1], [-18, 18]);
+  const headTranslateY = useTransform(sy, [-1, 1], [-12, 12]);
 
   // Eye transforms (move further within sockets)
-  const eyeX = useTransform(sx, [-1, 1], [-3.2, 3.2]);
-  const eyeY = useTransform(sy, [-1, 1], [-2.2, 2.2]);
+  const eyeX = useTransform(sx, [-1, 1], [-7, 7]);
+  const eyeY = useTransform(sy, [-1, 1], [-5, 5]);
 
   // Glow intensity reacts to proximity
   const glow = useTransform([sx, sy], ([x, y]) => {
