@@ -8,7 +8,7 @@ import { GradientButton } from "@/components/GradientButton";
 export const Route = createFileRoute("/pricing")({
   head: () => ({
     meta: [
-      { title: "Pricing — Rynolve" },
+      { title: "Pricing Rynolve" },
       { name: "description", content: "Transparent pricing for startups, scale-ups and enterprises. Fixed-scope and retainer options." },
       { property: "og:title", content: "Rynolve Pricing" },
       { property: "og:description", content: "Premium engineering at predictable prices." },
@@ -117,7 +117,7 @@ function Pricing() {
         <FadeIn>
           <div className="mt-12 glass rounded-3xl p-8 text-center">
             <h3 className="text-xl font-semibold">Need something custom?</h3>
-            <p className="mt-2 text-sm text-muted-foreground">Multi-team engagements, white-label builds, government contracts — we've done it all.</p>
+            <p className="mt-2 text-sm text-muted-foreground">Multi-team engagements, white-label builds, government contracts we've done it all.</p>
             <div className="mt-5">
               <GradientButton to="/contact" variant="outline">Talk to sales</GradientButton>
             </div>

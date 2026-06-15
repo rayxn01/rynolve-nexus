@@ -7,9 +7,9 @@ import { GradientButton } from "@/components/GradientButton";
 export const Route = createFileRoute("/solutions")({
   head: () => ({
     meta: [
-      { title: "Solutions — Rynolve" },
+      { title: "Solutions Rynolve" },
       { name: "description", content: "Industry-shaped solutions: healthcare, fintech, real estate, ecommerce, education, logistics and more." },
-      { property: "og:title", content: "Solutions — Rynolve" },
+      { property: "og:title", content: "Solutions Rynolve" },
       { property: "og:description", content: "Tailored AI, web and SaaS playbooks for every vertical." },
     ],
   }),
@@ -42,7 +42,7 @@ function Solutions() {
               Built for <span className="gradient-text">your industry</span>
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Vertical playbooks combining AI, automation and product engineering — so you ship value faster.
+              Vertical playbooks combining AI, automation and product engineering so you ship value faster.
             </p>
           </FadeIn>
         </div>

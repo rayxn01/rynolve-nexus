@@ -8,7 +8,7 @@ import { Target, Eye, Heart, Lightbulb, Rocket, ArrowRight } from "lucide-react"
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Rynolve — Engineering the future of digital" },
+      { title: "About Rynolve Engineering the future of digital" },
       { name: "description", content: "Rynolve is a premium engineering studio building AI, web, mobile and SaaS products for ambitious teams worldwide." },
       { property: "og:title", content: "About Rynolve" },
       { property: "og:description", content: "Our story, mission and the team building intelligent digital experiences." },
@@ -19,9 +19,9 @@ export const Route = createFileRoute("/about")({
 
 const values = [
   { icon: Target, title: "Outcome-obsessed", desc: "Every line of code maps to a measurable business result." },
-  { icon: Heart, title: "Craft over speed", desc: "We move fast — but never at the expense of quality." },
+  { icon: Heart, title: "Craft over speed", desc: "We move fast but never at the expense of quality." },
   { icon: Lightbulb, title: "Curious always", desc: "We adopt what works, ignore hype, and ship the future." },
-  { icon: Rocket, title: "Partner, not vendor", desc: "Your success is our success — long after launch day." },
+  { icon: Rocket, title: "Partner, not vendor", desc: "Your success is our success long after launch day." },
 ];
 
 const timeline = [
@@ -58,7 +58,7 @@ function About() {
             <SectionHeader centered={false} eyebrow="Our Story" title={<>From a small studio to a <span className="gradient-text">global force</span></>} />
             <div className="mt-6 space-y-4 text-muted-foreground">
               <p>Rynolve started in 2017 with a simple belief: digital products should feel as premium as the brands behind them. Eight years later, that belief still drives every project we ship.</p>
-              <p>Today we're a distributed team across London, Berlin, Lagos and Singapore — building AI agents, SaaS platforms and digital products for startups, scale-ups and the Fortune 500.</p>
+              <p>Today we're a distributed team across London, Berlin, Lagos and Singapore building AI agents, SaaS platforms and digital products for startups, scale-ups and the Fortune 500.</p>
               <p>We're not the biggest agency. We don't want to be. We're the team you call when ordinary won't cut it.</p>
             </div>
           </FadeIn>
@@ -79,7 +79,7 @@ function About() {
       <Section>
         <div className="grid md:grid-cols-2 gap-6">
           {[
-            { icon: Eye, label: "Vision", title: "A world where every business runs on intelligent software.", desc: "We see a near future where AI doesn't replace people — it amplifies them. Our work is the bridge." },
+            { icon: Eye, label: "Vision", title: "A world where every business runs on intelligent software.", desc: "We see a near future where AI doesn't replace people it amplifies them. Our work is the bridge." },
             { icon: Target, label: "Mission", title: "Engineer premium digital experiences that move the needle.", desc: "We exist to build software that's beautiful to use, profitable to run, and impossible to forget." },
           ].map((b) => (
             <FadeIn key={b.label}>

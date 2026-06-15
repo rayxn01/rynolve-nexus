@@ -7,9 +7,9 @@ import { GradientButton } from "@/components/GradientButton";
 export const Route = createFileRoute("/careers")({
   head: () => ({
     meta: [
-      { title: "Careers — Rynolve" },
+      { title: "Careers Rynolve" },
       { name: "description", content: "Join Rynolve. Build AI-powered products with a senior, remote-first team." },
-      { property: "og:title", content: "Careers — Rynolve" },
+      { property: "og:title", content: "Careers Rynolve" },
       { property: "og:description", content: "Senior, remote-first engineering and design roles." },
     ],
   }),
@@ -26,7 +26,7 @@ const roles = [
 ];
 
 const perks = [
-  { icon: Globe, title: "Remote-first", desc: "Work from anywhere — we've been distributed since day one." },
+  { icon: Globe, title: "Remote-first", desc: "Work from anywhere we've been distributed since day one." },
   { icon: Heart, title: "Health & wellness", desc: "Premium private healthcare and wellness allowance." },
   { icon: Zap, title: "Learning budget", desc: "$2,500 annual budget for books, courses and conferences." },
   { icon: Briefcase, title: "Equity & bonus", desc: "Meaningful equity and performance bonuses for everyone." },

@@ -12,12 +12,12 @@ export const Route = createFileRoute("/services/$slug")({
   },
   head: ({ loaderData }) => {
     const s = loaderData?.service;
-    if (!s) return { meta: [{ title: "Service — Rynolve" }] };
+    if (!s) return { meta: [{ title: "Service Rynolve" }] };
     return {
       meta: [
-        { title: `${s.title} — Rynolve` },
+        { title: `${s.title} Rynolve` },
         { name: "description", content: s.tagline },
-        { property: "og:title", content: `${s.title} — Rynolve` },
+        { property: "og:title", content: `${s.title} Rynolve` },
         { property: "og:description", content: s.overview },
       ],
     };

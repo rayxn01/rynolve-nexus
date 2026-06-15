@@ -7,9 +7,9 @@ import { motion } from "framer-motion";
 export const Route = createFileRoute("/automations")({
   head: () => ({
     meta: [
-      { title: "AI Automations — Rynolve" },
+      { title: "AI Automations Rynolve" },
       { name: "description", content: "Custom AI agents, workflow automation and integrations powered by OpenAI, Gemini, Twilio and your stack." },
-      { property: "og:title", content: "AI Automations — Rynolve" },
+      { property: "og:title", content: "AI Automations Rynolve" },
       { property: "og:description", content: "Stop doing repetitive work. We build AI agents and automations that run your operations 24/7." },
     ],
   }),
@@ -18,13 +18,13 @@ export const Route = createFileRoute("/automations")({
 
 const automations = [
   { icon: Bot, title: "AI Customer Support Agents", desc: "24/7 support agents that resolve 80% of tickets and escalate the rest with full context." },
-  { icon: MessageSquare, title: "Lead Qualification Bots", desc: "Capture, qualify and route leads from your site, WhatsApp, Instagram and email — instantly." },
+  { icon: MessageSquare, title: "Lead Qualification Bots", desc: "Capture, qualify and route leads from your site, WhatsApp, Instagram and email instantly." },
   { icon: Mail, title: "Email & Outreach Automation", desc: "Personalised cold email and follow-up sequences powered by AI research and CRM data." },
-  { icon: Workflow, title: "Internal Workflow Automation", desc: "Replace manual ops — invoicing, onboarding, approvals, reporting — with reliable workflows." },
+  { icon: Workflow, title: "Internal Workflow Automation", desc: "Replace manual ops invoicing, onboarding, approvals, reporting with reliable workflows." },
   { icon: Database, title: "Data Sync & Enrichment", desc: "Keep your CRM, billing, support and analytics in lock-step with automatic enrichment." },
   { icon: FileText, title: "Document & Contract AI", desc: "Generate, review and extract data from contracts, proposals and reports automatically." },
   { icon: Bell, title: "Smart Notifications", desc: "Real-time alerts in Slack, email or SMS when KPIs move, deals stall or systems break." },
-  { icon: Zap, title: "Custom Integrations", desc: "Twilio, OpenAI, Gemini, Stripe, HubSpot, Notion, Airtable — connect anything to anything." },
+  { icon: Zap, title: "Custom Integrations", desc: "Twilio, OpenAI, Gemini, Stripe, HubSpot, Notion, Airtable connect anything to anything." },
 ];
 
 const benefits = [
@@ -60,7 +60,7 @@ function Automations() {
               Let AI do the <span className="gradient-text">repetitive work</span>
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Custom AI agents and automations that run your business 24/7 — built on OpenAI, Gemini, Twilio and your existing stack.
+              Custom AI agents and automations that run your business 24/7 built on OpenAI, Gemini, Twilio and your existing stack.
             </p>
             <div className="mt-8 flex flex-wrap gap-3 justify-center">
               <GradientButton to="/book-consultation" size="lg">Book a strategy call <ArrowRight className="h-4 w-4" /></GradientButton>
@@ -139,7 +139,7 @@ function Automations() {
         <FadeIn>
           <div className="glass glow-border rounded-3xl p-12 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold">Ready to automate? <span className="gradient-text">Let's map it out.</span></h2>
-            <p className="mt-3 text-sm text-muted-foreground max-w-xl mx-auto">Free 30-minute audit — we'll identify the 3 highest-ROI automations for your business.</p>
+            <p className="mt-3 text-sm text-muted-foreground max-w-xl mx-auto">Free 30-minute audit we'll identify the 3 highest-ROI automations for your business.</p>
             <div className="mt-8 flex flex-wrap gap-3 justify-center">
               <GradientButton to="/book-consultation" size="lg">Book consultation <ArrowRight className="h-4 w-4" /></GradientButton>
               <GradientButton to="/contact" variant="outline" size="lg">Contact us</GradientButton>

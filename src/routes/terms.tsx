@@ -4,9 +4,9 @@ import { Section, FadeIn, GlowBackground } from "@/components/Section";
 export const Route = createFileRoute("/terms")({
   head: () => ({
     meta: [
-      { title: "Terms of Service — Rynolve" },
+      { title: "Terms of Service Rynolve" },
       { name: "description", content: "The legal terms governing your use of Rynolve services." },
-      { property: "og:title", content: "Terms of Service — Rynolve" },
+      { property: "og:title", content: "Terms of Service Rynolve" },
       { property: "og:description", content: "Plain-English legal terms for working with Rynolve." },
     ],
   }),

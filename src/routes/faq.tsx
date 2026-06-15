@@ -6,9 +6,9 @@ import { GradientButton } from "@/components/GradientButton";
 export const Route = createFileRoute("/faq")({
   head: () => ({
     meta: [
-      { title: "FAQ — Rynolve" },
+      { title: "FAQ Rynolve" },
       { name: "description", content: "Answers to common questions about engagement, pricing, AI and process." },
-      { property: "og:title", content: "FAQ — Rynolve" },
+      { property: "og:title", content: "FAQ Rynolve" },
       { property: "og:description", content: "Answers to common questions about working with Rynolve." },
     ],
   }),
@@ -20,7 +20,7 @@ const groups = [
     title: "Getting started",
     items: [
       { q: "How quickly can we kick off?", a: "Most engagements start within 1–2 weeks of the discovery call." },
-      { q: "Do you offer free consultations?", a: "Yes — every project starts with a free 30-minute strategy call." },
+      { q: "Do you offer free consultations?", a: "Yes every project starts with a free 30-minute strategy call." },
       { q: "Do you sign NDAs?", a: "Always. We sign mutual NDAs before any sensitive discussion." },
     ],
   },
@@ -28,22 +28,22 @@ const groups = [
     title: "Pricing & engagement",
     items: [
       { q: "What does pricing look like?", a: "Fixed-scope projects start around $10,000. SaaS and AI platforms are custom-quoted by scope and outcome." },
-      { q: "Do you do retainers?", a: "Yes — monthly retainers from $7,500/month for ongoing product, AI ops or growth work." },
+      { q: "Do you do retainers?", a: "Yes monthly retainers from $7,500/month for ongoing product, AI ops or growth work." },
       { q: "What's included in a project?", a: "Product strategy, design, engineering, QA, deployment, and 30 days of post-launch support." },
     ],
   },
   {
     title: "AI & automation",
     items: [
-      { q: "Can you integrate AI into our existing product?", a: "Absolutely — that's our specialty. We embed agents, RAG pipelines, and intelligent UX into existing platforms." },
+      { q: "Can you integrate AI into our existing product?", a: "Absolutely that's our specialty. We embed agents, RAG pipelines, and intelligent UX into existing platforms." },
       { q: "Which AI providers do you use?", a: "OpenAI, Gemini, Anthropic, and open-source models depending on the use case, latency and cost profile." },
-      { q: "Is our data safe?", a: "Yes — we never train on your data, use your own keys, and keep PII isolated. SOC2-aligned practices." },
+      { q: "Is our data safe?", a: "Yes we never train on your data, use your own keys, and keep PII isolated. SOC2-aligned practices." },
     ],
   },
   {
     title: "Process & team",
     items: [
-      { q: "Will I work with senior people?", a: "Always. No bait-and-switch — the senior engineers and designers you meet are the ones who ship your project." },
+      { q: "Will I work with senior people?", a: "Always. No bait-and-switch the senior engineers and designers you meet are the ones who ship your project." },
       { q: "How do we communicate?", a: "Shared Slack, weekly demos, async Loom updates, and a live project board." },
       { q: "Do you work with startups or enterprise?", a: "Both. We have packages tuned for early-stage MVPs through to enterprise transformations." },
     ],

@@ -27,7 +27,7 @@ export const services: ServiceDetail[] = [
     tagline: "Eliminate repetitive work with intelligent workflows.",
     desc: "Eliminate repetitive work with intelligent workflows.",
     overview:
-      "We design, build and operate AI-powered workflows that quietly run your business 24/7 — from lead qualification and support to internal ops and reporting. Built on production-grade tooling, monitored, and tuned to your KPIs.",
+      "We design, build and operate AI-powered workflows that quietly run your business 24/7 from lead qualification and support to internal ops and reporting. Built on production-grade tooling, monitored, and tuned to your KPIs.",
     benefits: [
       "Save 20–40 hours per week per team",
       "Cut operational cost by up to 60%",
@@ -58,7 +58,7 @@ export const services: ServiceDetail[] = [
     tagline: "Custom autonomous agents trained on your business.",
     desc: "Custom autonomous agents trained on your business.",
     overview:
-      "Custom AI agents that understand your business context — your data, your tone, your processes — and act on it across chat, email, voice and your internal tools.",
+      "Custom AI agents that understand your business context your data, your tone, your processes and act on it across chat, email, voice and your internal tools.",
     benefits: [
       "Always-on agents handling 80%+ of repetitive work",
       "Personalised, on-brand interactions at scale",
@@ -145,7 +145,7 @@ export const services: ServiceDetail[] = [
     tagline: "Premium ecommerce stores that scale.",
     desc: "Premium ecommerce stores that scale.",
     overview:
-      "Premium Shopify and Shopify Plus stores — custom themes, conversion-tuned UX, headless storefronts and advanced integrations with your stack.",
+      "Premium Shopify and Shopify Plus stores custom themes, conversion-tuned UX, headless storefronts and advanced integrations with your stack.",
     benefits: [
       "Higher conversion rates and AOV",
       "Custom checkout and storefront UX",
@@ -174,7 +174,7 @@ export const services: ServiceDetail[] = [
     tagline: "Custom themes, blocks and headless WP.",
     desc: "Custom themes, blocks and headless WP.",
     overview:
-      "Custom WordPress builds — bespoke themes, Gutenberg blocks, WooCommerce, and headless WP backends — engineered for speed, security and editorial flexibility.",
+      "Custom WordPress builds bespoke themes, Gutenberg blocks, WooCommerce, and headless WP backends engineered for speed, security and editorial flexibility.",
     benefits: [
       "Editor-friendly content workflows",
       "Fast, secure and SEO-ready",
@@ -203,7 +203,7 @@ export const services: ServiceDetail[] = [
     tagline: "End-to-end product engineering, MVP to enterprise.",
     desc: "End-to-end product engineering, MVP to enterprise.",
     overview:
-      "End-to-end SaaS engineering — from MVP to multi-tenant enterprise platforms — covering product, design, frontend, backend, infra and growth instrumentation.",
+      "End-to-end SaaS engineering from MVP to multi-tenant enterprise platforms covering product, design, frontend, backend, infra and growth instrumentation.",
     benefits: [
       "Senior product team from day one",
       "MVP in weeks, not quarters",
@@ -232,7 +232,7 @@ export const services: ServiceDetail[] = [
     tagline: "Interfaces that feel premium and intuitive.",
     desc: "Interfaces that feel premium and intuitive.",
     overview:
-      "Product, brand and marketing design that feels premium — from research and information architecture to high-fidelity prototypes and design systems.",
+      "Product, brand and marketing design that feels premium from research and information architecture to high-fidelity prototypes and design systems.",
     benefits: [
       "Brand-consistent, accessible interfaces",
       "Higher engagement and conversion",
@@ -261,7 +261,7 @@ export const services: ServiceDetail[] = [
     tagline: "Custom CRMs and sales enablement tools.",
     desc: "Custom CRMs and sales enablement tools.",
     overview:
-      "Custom CRMs and sales enablement tools tailored to how your team actually sells — integrated with your data, automations and AI assistants.",
+      "Custom CRMs and sales enablement tools tailored to how your team actually sells integrated with your data, automations and AI assistants.",
     benefits: [
       "Workflows mapped to your sales motion",
       "AI-assisted enrichment and scoring",
@@ -290,7 +290,7 @@ export const services: ServiceDetail[] = [
     tagline: "Technical SEO and content that ranks.",
     desc: "Technical SEO and content that ranks.",
     overview:
-      "Technical SEO, content strategy and link-building that compounds traffic month over month — backed by a measurable, audit-driven approach.",
+      "Technical SEO, content strategy and link-building that compounds traffic month over month backed by a measurable, audit-driven approach.",
     benefits: [
       "Higher organic rankings and traffic",
       "Audit-driven, measurable progress",
@@ -319,7 +319,7 @@ export const services: ServiceDetail[] = [
     tagline: "Performance marketing and brand campaigns.",
     desc: "Performance marketing and brand campaigns.",
     overview:
-      "Performance and brand marketing — paid media, creative, lifecycle and analytics — engineered to drive pipeline, not vanity metrics.",
+      "Performance and brand marketing paid media, creative, lifecycle and analytics engineered to drive pipeline, not vanity metrics.",
     benefits: [
       "Lower CAC and higher ROAS",
       "Creative that actually converts",
@@ -348,7 +348,7 @@ export const services: ServiceDetail[] = [
     tagline: "Connect any system, any service, any data.",
     desc: "Connect any system, any service, any data.",
     overview:
-      "We connect any system to any other — payment, comms, CRM, AI, ERP — with reliable, observable integrations and clear contracts between teams.",
+      "We connect any system to any other payment, comms, CRM, AI, ERP with reliable, observable integrations and clear contracts between teams.",
     benefits: [
       "Reliable, monitored integrations",
       "Faster delivery via reusable patterns",
@@ -377,7 +377,7 @@ export const services: ServiceDetail[] = [
     tagline: "Real-time analytics tailored to your KPIs.",
     desc: "Real-time analytics tailored to your KPIs.",
     overview:
-      "Real-time, role-based dashboards that surface the KPIs your team actually acts on — built on your data, with the UX of a modern SaaS product.",
+      "Real-time, role-based dashboards that surface the KPIs your team actually acts on built on your data, with the UX of a modern SaaS product.",
     benefits: [
       "One source of truth across teams",
       "Real-time KPIs and alerts",
@@ -406,7 +406,7 @@ export const services: ServiceDetail[] = [
     tagline: "Streamline operations end-to-end.",
     desc: "Streamline operations end-to-end.",
     overview:
-      "Streamline operations end-to-end — finance, ops, HR, support — with reliable workflows that connect your tools and people.",
+      "Streamline operations end-to-end finance, ops, HR, support with reliable workflows that connect your tools and people.",
     benefits: [
       "Faster cycle times across ops",
       "Lower error rates and rework",
@@ -435,7 +435,7 @@ export const services: ServiceDetail[] = [
     tagline: "Secure, scalable cloud on AWS, GCP, Azure.",
     desc: "Secure, scalable cloud on AWS, GCP, Azure.",
     overview:
-      "Secure, scalable cloud architectures on AWS, GCP and Azure — designed for performance, cost and compliance from day one.",
+      "Secure, scalable cloud architectures on AWS, GCP and Azure designed for performance, cost and compliance from day one.",
     benefits: [
       "Production-grade reliability",
       "Cost-optimised architectures",

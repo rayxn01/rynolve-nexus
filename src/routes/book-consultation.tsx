@@ -6,9 +6,9 @@ import { Section, FadeIn, GlowBackground } from "@/components/Section";
 export const Route = createFileRoute("/book-consultation")({
   head: () => ({
     meta: [
-      { title: "Book a Consultation — Rynolve" },
+      { title: "Book a Consultation Rynolve" },
       { name: "description", content: "Book a free 30-minute strategy call with the Rynolve team." },
-      { property: "og:title", content: "Book a Consultation — Rynolve" },
+      { property: "og:title", content: "Book a Consultation Rynolve" },
       { property: "og:description", content: "Free 30-minute call. Real recommendations. No obligation." },
     ],
   }),
@@ -19,7 +19,7 @@ const benefits = [
   "30-minute strategy call with a senior engineer",
   "Tailored recommendations for your project",
   "Roadmap, timeline & ballpark estimate",
-  "Zero obligation — no sales pressure",
+  "Zero obligation no sales pressure",
 ];
 
 const slots = ["09:00", "10:30", "12:00", "14:00", "15:30", "17:00"];
