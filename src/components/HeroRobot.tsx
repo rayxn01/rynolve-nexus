@@ -90,6 +90,7 @@ export function HeroRobot() {
           style={{
             rotateX: headRotateX,
             rotateY: headRotateY,
+            rotateZ: headRotateZ,
             x: headTranslateX,
             y: headTranslateY,
           }}
