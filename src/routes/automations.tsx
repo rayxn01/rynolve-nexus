@@ -28,7 +28,7 @@ const automations = [
 ];
 
 const benefits = [
-  "Save 20–40 hours per week per team",
+  "Save 20 to 40 hours per week per team",
   "Cut operational costs by up to 60%",
   "Respond to leads in seconds, not hours",
   "Eliminate human error in repetitive workflows",
@@ -113,7 +113,7 @@ function Automations() {
               </div>
               <div className="mt-8 pt-6 border-t border-border">
                 <p className="text-xs uppercase tracking-widest text-muted-foreground">Typical project</p>
-                <p className="mt-1 text-4xl font-bold gradient-text">2–6 weeks</p>
+                <p className="mt-1 text-4xl font-bold gradient-text">2 to 6 weeks</p>
                 <p className="mt-1 text-sm text-muted-foreground">From discovery to a live, monitored automation.</p>
               </div>
             </div>
