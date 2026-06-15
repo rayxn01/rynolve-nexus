@@ -29,7 +29,7 @@ export const services: ServiceDetail[] = [
     overview:
       "We design, build and operate AI-powered workflows that quietly run your business 24/7 from lead qualification and support to internal ops and reporting. Built on production-grade tooling, monitored, and tuned to your KPIs.",
     benefits: [
-      "Save 20–40 hours per week per team",
+      "Save 20 to 40 hours per week per team",
       "Cut operational cost by up to 60%",
       "Eliminate human error in repetitive tasks",
       "Respond to customers and leads in seconds",
@@ -89,7 +89,7 @@ export const services: ServiceDetail[] = [
     overview:
       "High-performance marketing sites and web platforms engineered for speed, SEO and conversion. Custom design, accessible by default, built on modern frameworks.",
     benefits: [
-      "Lighthouse 90–100 performance",
+      "Lighthouse 90 to 100 performance",
       "SEO-ready architecture from day one",
       "CMS or headless options to fit your team",
       "Conversion-focused UX",

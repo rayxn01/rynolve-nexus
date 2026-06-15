@@ -19,7 +19,7 @@ const groups = [
   {
     title: "Getting started",
     items: [
-      { q: "How quickly can we kick off?", a: "Most engagements start within 1–2 weeks of the discovery call." },
+      { q: "How quickly can we kick off?", a: "Most engagements start within 1 to 2 weeks of the discovery call." },
       { q: "Do you offer free consultations?", a: "Yes every project starts with a free 30-minute strategy call." },
       { q: "Do you sign NDAs?", a: "Always. We sign mutual NDAs before any sensitive discussion." },
     ],

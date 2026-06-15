@@ -69,7 +69,7 @@ function Pricing() {
               </button>
               <button onClick={() => setYearly(true)}
                 className={`px-5 py-2 rounded-full text-sm font-medium transition-all flex items-center gap-2 ${yearly ? "bg-gradient-to-r from-violet via-primary to-accent text-primary-foreground" : "text-muted-foreground"}`}>
-                Yearly <span className="text-xs opacity-80">−15%</span>
+                Yearly <span className="text-xs opacity-80">15%</span>
               </button>
             </div>
           </FadeIn>

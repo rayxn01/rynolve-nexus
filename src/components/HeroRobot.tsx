@@ -14,11 +14,11 @@ export function HeroRobot() {
   const px = useMotionValue(0);
   const py = useMotionValue(0);
 
-  // Smoothed — snappier spring for more responsive tracking
+  // Smoothed   snappier spring for more responsive tracking
   const sx = useSpring(px, { stiffness: 140, damping: 16, mass: 0.5 });
   const sy = useSpring(py, { stiffness: 140, damping: 16, mass: 0.5 });
 
-  // Head transforms — wider rotation & travel for visible tracking
+  // Head transforms   wider rotation & travel for visible tracking
   const headRotateY = useTransform(sx, [-1, 1], [-28, 28]);
   const headRotateX = useTransform(sy, [-1, 1], [22, -22]);
   const headRotateZ = useTransform(sx, [-1, 1], [-6, 6]);
