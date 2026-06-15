@@ -8,8 +8,8 @@ import { GradientButton } from "@/components/GradientButton";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Rynolve" },
-      { name: "description", content: "Get in touch with Rynolve. Call +44 7466 712583 or send a message — we reply within 24 hours." },
+      { title: "Contact Rynolve" },
+      { name: "description", content: "Get in touch with Rynolve. Call +44 7466 712583 or send a message we reply within 24 hours." },
       { property: "og:title", content: "Contact Rynolve" },
       { property: "og:description", content: "Talk to our team. We respond within 24 hours." },
     ],
@@ -110,7 +110,7 @@ function Contact() {
               <div className="glass glow-border rounded-3xl p-8">
                 <Calendar className="h-8 w-8 text-primary mb-4" />
                 <h3 className="font-semibold text-lg">Book a 30-min call</h3>
-                <p className="mt-2 text-sm text-muted-foreground">Pick a slot that works — no pitch, just a real conversation.</p>
+                <p className="mt-2 text-sm text-muted-foreground">Pick a slot that works no pitch, just a real conversation.</p>
                 <GradientButton to="/book-consultation" className="mt-5 w-full">
                   Book consultation <ArrowRight className="h-4 w-4" />
                 </GradientButton>

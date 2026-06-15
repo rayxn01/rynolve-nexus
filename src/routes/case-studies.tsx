@@ -7,9 +7,9 @@ import { GradientButton } from "@/components/GradientButton";
 export const Route = createFileRoute("/case-studies")({
   head: () => ({
     meta: [
-      { title: "Case Studies — Rynolve" },
-      { name: "description", content: "Real outcomes from real clients — AI platforms, fintech apps and SaaS products built by Rynolve." },
-      { property: "og:title", content: "Case Studies — Rynolve" },
+      { title: "Case Studies Rynolve" },
+      { name: "description", content: "Real outcomes from real clients AI platforms, fintech apps and SaaS products built by Rynolve." },
+      { property: "og:title", content: "Case Studies Rynolve" },
       { property: "og:description", content: "Measurable wins from the products we ship." },
     ],
   }),

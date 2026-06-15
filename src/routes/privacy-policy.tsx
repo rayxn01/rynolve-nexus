@@ -4,9 +4,9 @@ import { Section, FadeIn, GlowBackground } from "@/components/Section";
 export const Route = createFileRoute("/privacy-policy")({
   head: () => ({
     meta: [
-      { title: "Privacy Policy — Rynolve" },
+      { title: "Privacy Policy Rynolve" },
       { name: "description", content: "How Rynolve collects, stores and protects your data." },
-      { property: "og:title", content: "Privacy Policy — Rynolve" },
+      { property: "og:title", content: "Privacy Policy Rynolve" },
       { property: "og:description", content: "Your data, respected." },
     ],
   }),
@@ -14,7 +14,7 @@ export const Route = createFileRoute("/privacy-policy")({
 });
 
 const sections = [
-  { h: "Information we collect", p: "We collect information you provide directly (name, email, company), information from cookies and analytics, and information about how you use our services. We do not sell your personal data — ever." },
+  { h: "Information we collect", p: "We collect information you provide directly (name, email, company), information from cookies and analytics, and information about how you use our services. We do not sell your personal data ever." },
   { h: "How we use information", p: "To deliver and improve our services, communicate with you about projects, send relevant updates (only if you opt in), and meet legal obligations." },
   { h: "Data sharing", p: "We share data only with trusted processors (e.g. analytics, email) under strict data-processing agreements. We never sell or rent your data." },
   { h: "Your rights (GDPR)", p: "You may access, correct, export or delete your data at any time. Email privacy@rynolve.com and we'll respond within 30 days." },

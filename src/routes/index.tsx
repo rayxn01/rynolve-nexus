@@ -12,9 +12,9 @@ import { HeroRobot } from "@/components/HeroRobot";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Rynolve — Intelligence Made Simple" },
-      { name: "description", content: "We build intelligent digital experiences. AI automation, web, mobile, and SaaS — engineered to a premium standard." },
-      { property: "og:title", content: "Rynolve — We Build Intelligent Digital Experiences" },
+      { title: "Rynolve Intelligence Made Simple" },
+      { name: "description", content: "We build intelligent digital experiences. AI automation, web, mobile, and SaaS engineered to a premium standard." },
+      { property: "og:title", content: "Rynolve We Build Intelligent Digital Experiences" },
       { property: "og:description", content: "Premium AI automation, web, mobile and SaaS development." },
     ],
   }),
@@ -32,7 +32,7 @@ const services = [
 
 const why = [
   { icon: Shield, title: "Enterprise-grade", desc: "Production code, security baked in, audited architectures." },
-  { icon: Rocket, title: "Speed to ship", desc: "MVPs in weeks, not quarters — without sacrificing quality." },
+  { icon: Rocket, title: "Speed to ship", desc: "MVPs in weeks, not quarters without sacrificing quality." },
   { icon: TrendingUp, title: "Outcome-focused", desc: "We design for measurable business impact, not pretty demos." },
   { icon: Users, title: "True partnership", desc: "Senior engineers embedded with your team end-to-end." },
 ];
@@ -55,13 +55,13 @@ const projects = [
 const testimonials = [
   { name: "Sarah Mitchell", role: "CTO, Lumina Labs", quote: "Rynolve delivered our AI platform in 9 weeks. Polished, fast, and exactly what we briefed. Best agency we've worked with." },
   { name: "Daniel Okafor", role: "Founder, Vaultway", quote: "They genuinely care about outcomes. Our app launch was flawless and conversion is up 3x." },
-  { name: "Aiko Tanaka", role: "VP Product, Helix", quote: "Senior engineers from day one. The level of craftsmanship is rare — it shows in every screen." },
+  { name: "Aiko Tanaka", role: "VP Product, Helix", quote: "Senior engineers from day one. The level of craftsmanship is rare it shows in every screen." },
 ];
 
 const faqs = [
   { q: "How quickly can we start?", a: "Most engagements kick off within 1–2 weeks of the discovery call." },
   { q: "Do you work with startups or only enterprise?", a: "Both. We have packages tuned for early-stage MVPs through to enterprise transformations." },
-  { q: "Can you integrate AI into our existing product?", a: "Yes — that's our specialty. We embed AI agents, automation and intelligent UX into existing platforms." },
+  { q: "Can you integrate AI into our existing product?", a: "Yes that's our specialty. We embed AI agents, automation and intelligent UX into existing platforms." },
   { q: "What does pricing look like?", a: "Fixed-scope projects start around $10k. SaaS engagements and AI platforms are custom-quoted." },
 ];
 
@@ -161,7 +161,7 @@ function Home() {
         <SectionHeader
           eyebrow="Our Expertise"
           title={<>What we do, <span className="gradient-text">exceptionally well</span></>}
-          description="Full-stack capabilities under one roof — strategy, design, engineering and AI."
+          description="Full-stack capabilities under one roof strategy, design, engineering and AI."
         />
         <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((s, i) => (
@@ -201,7 +201,7 @@ function Home() {
               Premium engineering, <span className="gradient-text">measurable impact</span>
             </h2>
             <p className="mt-4 text-muted-foreground">
-              We don't ship demos — we ship products that customers love and businesses
+              We don't ship demos we ship products that customers love and businesses
               measure. Every engagement is led by senior engineers and designers.
             </p>
             <div className="mt-8 space-y-3">

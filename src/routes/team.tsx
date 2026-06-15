@@ -28,7 +28,7 @@ const team = [
     name: "Fariz Ali",
     role: "Chief Technology Officer",
     tagline: "Technology Industry Expert | 7+ Years in Engineering Leadership",
-    bio: "CTO at Rynolve. Leads the engineering org across cloud, AI and product platforms — architecting scalable systems for high-growth companies.",
+    bio: "CTO at Rynolve. Leads the engineering org across cloud, AI and product platforms architecting scalable systems for high-growth companies.",
     photo: farizImg,
   },
   {
@@ -50,10 +50,10 @@ const team = [
 export const Route = createFileRoute("/team")({
   head: () => ({
     meta: [
-      { title: "Leadership — Rynolve" },
-      { name: "description", content: "Meet the leadership team behind Rynolve — engineering, design, technology and finance experts shaping the future of digital." },
-      { property: "og:title", content: "Leadership — Rynolve" },
-      { property: "og:description", content: "Meet the leadership team behind Rynolve — engineering, design, technology and finance experts shaping the future of digital." },
+      { title: "Leadership Rynolve" },
+      { name: "description", content: "Meet the leadership team behind Rynolve engineering, design, technology and finance experts shaping the future of digital." },
+      { property: "og:title", content: "Leadership Rynolve" },
+      { property: "og:description", content: "Meet the leadership team behind Rynolve engineering, design, technology and finance experts shaping the future of digital." },
       { property: "og:image", content: leadershipImg },
     ],
   }),
@@ -95,7 +95,7 @@ function TeamPage() {
                 <div className="relative aspect-square w-full overflow-hidden rounded-2xl bg-black ring-1 ring-primary/20">
                   <img
                     src={m.photo}
-                    alt={`${m.name} — ${m.role} at Rynolve`}
+                    alt={`${m.name} ${m.role} at Rynolve`}
                     loading="lazy"
                     className="w-full h-full object-cover object-top"
                   />

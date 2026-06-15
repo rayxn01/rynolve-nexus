@@ -46,7 +46,7 @@ export function Footer() {
           <div className="lg:col-span-4">
             <Logo />
             <p className="mt-4 text-sm text-muted-foreground max-w-sm">
-              Rynolve builds intelligent digital experiences — AI automation, web,
+              Rynolve builds intelligent digital experiences AI automation, web,
               mobile, and SaaS for ambitious teams worldwide.
             </p>
             <div className="mt-6 space-y-2 text-sm text-muted-foreground">

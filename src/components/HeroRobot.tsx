@@ -4,7 +4,7 @@ import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 /**
  * Large interactive robot for the hero section.
  * Head tilts toward cursor, eyes track it, antenna pulses.
- * Pure SVG + Framer Motion — no 3D libs, fast to load.
+ * Pure SVG + Framer Motion no 3D libs, fast to load.
  */
 export function HeroRobot() {
   const wrapRef = useRef<HTMLDivElement>(null);

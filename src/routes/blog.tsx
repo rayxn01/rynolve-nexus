@@ -7,9 +7,9 @@ import { GradientButton } from "@/components/GradientButton";
 export const Route = createFileRoute("/blog")({
   head: () => ({
     meta: [
-      { title: "Blog — Rynolve" },
+      { title: "Blog Rynolve" },
       { name: "description", content: "Insights on AI automation, product engineering and growth from the Rynolve team." },
-      { property: "og:title", content: "Blog — Rynolve" },
+      { property: "og:title", content: "Blog Rynolve" },
       { property: "og:description", content: "Sharp takes on AI, SaaS, and modern product engineering." },
     ],
   }),

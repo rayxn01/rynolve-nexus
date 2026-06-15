@@ -9,8 +9,8 @@ import { PortfolioCard } from "@/components/PortfolioCard";
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
     meta: [
-      { title: "Portfolio — Rynolve" },
-      { name: "description", content: "Selected work from Rynolve — WordPress, Shopify and full stack projects delivered for clients worldwide." },
+      { title: "Portfolio Rynolve" },
+      { name: "description", content: "Selected work from Rynolve WordPress, Shopify and full stack projects delivered for clients worldwide." },
       { property: "og:title", content: "Rynolve Portfolio" },
       { property: "og:description", content: "WordPress, Shopify and full stack projects delivered globally." },
     ],

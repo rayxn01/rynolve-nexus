@@ -10,7 +10,7 @@ export function CursorGlow() {
 
   useEffect(() => {
     if (window.matchMedia("(hover: none)").matches) return;
-    if (window.innerWidth < 1024) return; // skip on small viewports — cheap perf win
+    if (window.innerWidth < 1024) return; // skip on small viewports cheap perf win
     setEnabled(true);
     let raf = 0;
     let pending: { x: number; y: number } | null = null;

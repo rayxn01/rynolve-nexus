@@ -15,7 +15,7 @@ function buildSources(url: string): string[] {
   // Strip protocol for some providers
   const noProto = url.replace(/^https?:\/\//, "").replace(/\/$/, "");
   return [
-    // WordPress mShots — free, reliable, real screenshots
+    // WordPress mShots free, reliable, real screenshots
     `https://s.wordpress.com/mshots/v1/${encodeURIComponent(url)}?w=900&h=1100`,
     // Microlink screenshot (free tier)
     `https://api.microlink.io/?url=${encodeURIComponent(url)}&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=1600`,
@@ -74,7 +74,7 @@ export function PortfolioCard({ name, url, category, description, color, index }
       {!failed && (
         <img
           src={sources[srcIdx]}
-          alt={`${name} — live website preview`}
+          alt={`${name} live website preview`}
           loading={index < 3 ? "eager" : "lazy"}
           decoding="async"
           fetchPriority={index < 3 ? "high" : "low"}
@@ -84,7 +84,7 @@ export function PortfolioCard({ name, url, category, description, color, index }
             loaded ? "opacity-100" : "opacity-0"
           }`}
           onLoad={(e) => {
-            // mShots returns a tiny placeholder (~400 bytes) while generating — treat as not-loaded
+            // mShots returns a tiny placeholder (~400 bytes) while generating treat as not-loaded
             const img = e.currentTarget;
             if (img.naturalWidth < 200 || img.naturalHeight < 200) {
               if (srcIdx < sources.length - 1) {
@@ -117,7 +117,7 @@ export function PortfolioCard({ name, url, category, description, color, index }
         <p className="mt-1 text-xs text-white/70 line-clamp-2">{description}</p>
       </div>
 
-      {/* Hover overlay — desktop (hover-capable) only, so mobile single-tap navigates */}
+      {/* Hover overlay desktop (hover-capable) only, so mobile single-tap navigates */}
       <div className="absolute inset-0 bg-background/85 backdrop-blur-sm opacity-0 [@media(hover:hover)]:group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end pointer-events-none">
         <span className="text-xs text-primary uppercase tracking-wider">{category}</span>
         <h3 className="mt-1 text-2xl font-bold">{name}</h3>

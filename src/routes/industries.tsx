@@ -7,9 +7,9 @@ import { GradientButton } from "@/components/GradientButton";
 export const Route = createFileRoute("/industries")({
   head: () => ({
     meta: [
-      { title: "Industries — Rynolve" },
+      { title: "Industries Rynolve" },
       { name: "description", content: "Vertical expertise across healthcare, fintech, ecommerce, logistics, education and SaaS." },
-      { property: "og:title", content: "Industries — Rynolve" },
+      { property: "og:title", content: "Industries Rynolve" },
       { property: "og:description", content: "Specialised teams for every sector." },
     ],
   }),
@@ -40,7 +40,7 @@ function Industries() {
               Specialised for <span className="gradient-text">your sector</span>
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Deep vertical expertise — we know your customers, regulations and growth levers.
+              Deep vertical expertise we know your customers, regulations and growth levers.
             </p>
           </FadeIn>
         </div>

@@ -8,8 +8,8 @@ import { services } from "@/data/services";
 export const Route = createFileRoute("/services/")({
   head: () => ({
     meta: [
-      { title: "Services — Rynolve" },
-      { name: "description", content: "AI automation, web, mobile, SaaS, design, cloud and growth — full-service engineering for ambitious teams." },
+      { title: "Services Rynolve" },
+      { name: "description", content: "AI automation, web, mobile, SaaS, design, cloud and growth full-service engineering for ambitious teams." },
       { property: "og:title", content: "Rynolve Services" },
       { property: "og:description", content: "Premium engineering services across AI, web, mobile and SaaS." },
     ],
