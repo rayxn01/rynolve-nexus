@@ -43,12 +43,15 @@ export function HeroRobot() {
       const r = el.getBoundingClientRect();
       const cx = r.left + r.width / 2;
       const cy = r.top + r.height / 2;
-      const dx = (e.clientX - cx) / (r.width / 2);
-      const dy = (e.clientY - cy) / (r.height / 2);
-      px.set(Math.max(-1.2, Math.min(1.2, dx)));
-      py.set(Math.max(-1.2, Math.min(1.2, dy)));
+      // Use viewport-scaled range so the robot tracks cursor across the whole screen
+      const rangeX = Math.max(window.innerWidth * 0.4, r.width);
+      const rangeY = Math.max(window.innerHeight * 0.5, r.height);
+      const dx = (e.clientX - cx) / rangeX;
+      const dy = (e.clientY - cy) / rangeY;
+      px.set(Math.max(-1, Math.min(1, dx * 2.2)));
+      py.set(Math.max(-1, Math.min(1, dy * 2.2)));
     };
-    window.addEventListener("mousemove", onMove);
+    window.addEventListener("mousemove", onMove, { passive: true });
     return () => window.removeEventListener("mousemove", onMove);
   }, [px, py]);
 
